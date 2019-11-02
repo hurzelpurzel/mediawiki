@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mediawiki
+  namespace: mediawiki
+spec:
+    containers:
+      - name: web
+        image: "registry.redhat.io/openshift3/mediawiki:latest"
+        imagePullPolicy: IfNotPresent
+        ports:                              
+         - containerPort: 8080
+           protocol: TCP
+    imagePullSecrets:
+      - name: 11217608-a422171-pull-secret
