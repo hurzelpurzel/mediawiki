@@ -1,19 +1,20 @@
 apiVersion: v1
 kind: BuildConfig
 metadata:
-   name: myimage
+   name: mediabake-build
 spec:
    strategy:
      type: Docker
      dockerStrategy:
-       from:
-       kind: ImageStreamTag
-       name: centos:7
-     source:
-       type: Git
+     from: 
+          kind: ImageStreamTag
+          name: mediawiki:latest
+   source:
        git:
-         uri: https://github.com/demo/myimage.git
-     output:
+         uri: "https://github.com/hurzelpurzel/mediawiki.git"
+         ref: "master"
+       contextDir: "config"  
+   ouput:
        to:
          kind: ImageStreamTag
-         name: myimage:latest
+         name: baked:latest
