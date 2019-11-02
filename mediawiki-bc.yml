@@ -16,5 +16,5 @@ spec:
        contextDir: "config"  
    output:
        to:
-         kind: ImageStreamTag
+         kind: DockerImage
          name: baked:latest
