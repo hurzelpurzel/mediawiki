@@ -14,7 +14,7 @@ spec:
          uri: "https://github.com/hurzelpurzel/mediawiki.git"
          ref: "master"
        contextDir: "config"  
-   ouput:
+   output:
        to:
          kind: ImageStreamTag
          name: baked:latest
