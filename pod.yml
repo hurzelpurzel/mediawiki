@@ -4,11 +4,13 @@ kind: Pod
 metadata:
   name: mediawiki
   namespace: mediawiki
+  labels: 
+    name: mediawiki
 spec:
     containers:
       - name: web
         image: "docker.io/hurzelpurzel/mediabake:latest"
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:                              
          - containerPort: 8080
            protocol: TCP

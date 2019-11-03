@@ -13,7 +13,9 @@ spec:
        git:
          uri: "https://github.com/hurzelpurzel/mediawiki.git"
          ref: "master"
-       contextDir: "config"  
+       contextDir: "config"
+       imagePullSecrets:
+        - name: 11217608-a422171-pull-secret
    output:
        to:
          kind: DockerImage
