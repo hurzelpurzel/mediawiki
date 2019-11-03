@@ -2,15 +2,18 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mediawiki
+  name: mediawiki-rh
   namespace: mediawiki
+  labels: 
+    name: mediawiki-rh
 spec:
     containers:
       - name: web
-        image: "docker.io/hurzelpurzel/mediabake:latest"
+        image: "registry.redhat.io/openshift3/mediawiki:latest"
         imagePullPolicy: IfNotPresent
         ports:                              
          - containerPort: 8080
            protocol: TCP
     imagePullSecrets:
-      - name: dockerhub
+      - name: 11217608-a422171-pull-secret
+

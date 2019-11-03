@@ -17,4 +17,6 @@ spec:
    output:
        to:
          kind: DockerImage
-         name: baked:latest
+         name: docker.io/hurzelpurzel/mediabake:latest
+       pushSecret:
+         name: "dockerhub"
