@@ -4,11 +4,10 @@ metadata:
    name: mediabake-build
 spec:
    strategy:
-     type: Docker
      dockerStrategy:
       from:
-      kind: "ImageStreamTag"
-      name: "mediawiki/mediawiki:latest"
+        kind: "ImageStreamTag"
+        name: "mediawiki:latest"
    source:
        git:
          uri: "https://github.com/hurzelpurzel/mediawiki.git"
