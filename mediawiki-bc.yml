@@ -6,8 +6,9 @@ spec:
    strategy:
      type: Docker
      dockerStrategy:
-     pullSecret:
-        name: 11217608-a422171-pull-secret     
+      from:
+      kind: "ImageStreamTag"
+      name: "mediawiki/mediawiki:latest"
    source:
        git:
          uri: "https://github.com/hurzelpurzel/mediawiki.git"
